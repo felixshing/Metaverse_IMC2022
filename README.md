@@ -23,7 +23,7 @@ Repo Root
 Please cite our paper if you think the source codes are useful in your research project.
 ```
 @inproceedings{cheng2022are,
-    author = {Ruizhi Cheng, Nan Wu, Matteo Varvello, Songqing Chen, and Bo Han.},
+    author = {Ruizhi Cheng, Nan Wu, Matteo Varvello, Songqing Chen, and Bo Han},
     title = {{Are We Ready for Metaverse? A Measurement Study of Social Virtual Reality Platforms}},
     year = {2022},
     booktitle={Proceedings of ACM SIGCOMM Conference on Internet Measurement (IMC)}
