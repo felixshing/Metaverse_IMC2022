@@ -1,6 +1,6 @@
 # @Time    : 4/15/22 8:54 AM
 # @Author  : Ruizhi Cheng
-# @FileName: two_quest2_latency.py
+# @FileName: E2Elatency.py
 # @Email   : rcheng4@gmu.edu
 import numpy as np,scipy.stats as st
 from datetime import datetime, timedelta
