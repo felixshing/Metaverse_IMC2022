@@ -20,7 +20,7 @@ Repo Root
 [Homepage](https://felixshing.github.io/)
 
 ## Notes
-Please cite our paper if you think the source codes are useful in your research project.
+Please consider citing our paper if you think the source codes are useful in your research project.
 ```
 @inproceedings{cheng2022are,
     author = {Ruizhi Cheng, Nan Wu, Matteo Varvello, Songqing Chen, and Bo Han},
