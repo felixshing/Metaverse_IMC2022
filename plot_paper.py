@@ -65,7 +65,6 @@ def plot_trace(trace_and_label,xlabel,ylabel):
 
 
     ###TCP uplink
-    ###E2Elatency
     ax1.set_xlim([0.1, 310])
     ax1.set_ylim([0,2.1])
     ax1.set_yticks([0, 0.3, 0.5, 0.7, 1.0, 1.5])
@@ -156,6 +155,7 @@ def get_col(filename,col_index):
 #
 # xlabel = 'Time (s)'
 # #ylabel1 = 'Packet Size/s (Byte)'
+# ylabel2 = 'Packets/s'
 # ylabel2 = 'Packets/s'
 # ylabel3 = 'Bitrate (Mbps)'
 # ########u1#######
