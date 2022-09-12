@@ -6,12 +6,12 @@ This repository contains scripts used in our IMC'22 paper "Are We Ready for Meta
 Repo Root
 +-- disruption.py          # Sec. 8: Network Disruptions
 +-- plot_paper.py          # Backbond of plotting results
-+-- ovr_plot.py            # Retrive data from OVR Metrics Tool and plot the results
-+-- resource_plot.py       # Plot resource utilizaion
++-- ovr_plot.py            # Get data from OVR Metrics Tool and plot the results
++-- resource_plot.py       # Plot resource utilization
 +-- wireshark_plot.py      # Plot network trace from Wireshark
     +-- E2Elatency         # Sec. 7: End-to-end Latency
         +-- crop_video.py       # Crop video
-        +-- video2frame.py      # Retrive video frame from the video
+        +-- video2frame.py      # Extract the video frame from the video
         +-- quest2_AP_sync.py   # Sync time between Quest2s
         +-- E2Elatency.py       # Calculate the E2E latency
 ```
