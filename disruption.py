@@ -221,11 +221,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-a", help='set the adapter', required=True)
     parser.add_argument("-b", help='bandwidth',action = 'store_true')
-    parser.add_argument("-l", help='latency', action='store_true')
+    parser.add_argument("-l", help='E2Elatency', action='store_true')
     parser.add_argument("-d", help='downlink',action='store_true')
     parser.add_argument("-u", help='uplink',action='store_true')
     parser.add_argument("-p", help='packet loss', action='store_true')
-    parser.add_argument("-lp", help='latency+loss', action='store_true')
+    parser.add_argument("-lp", help='E2Elatency+loss', action='store_true')
     args = parser.parse_args()
     if args.b:
         bandwidth_tc(args)
@@ -236,6 +236,6 @@ if __name__ == '__main__':
     elif args.lp:
         latency_loss(args)
     else:
-        print("Please indicate bandwidth(b), latency (l),or packet loss (p)")
+        print("Please indicate bandwidth(b), E2Elatency (l),or packet loss (p)")
 
     #main()

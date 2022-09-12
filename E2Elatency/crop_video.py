@@ -7,7 +7,7 @@ import os
 import argparse
 import subprocess
 PLATFORM = '../../../AltspaceVR'
-TYPE='latency'
+TYPE='E2Elatency'
 DATE='0516'
 #OUTFILE = 'U2_T/time_10.mp4'
 #OUTFILE = 'U2_time/time_7.mp4'

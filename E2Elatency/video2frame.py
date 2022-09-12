@@ -8,7 +8,7 @@ import cv2
 import sys
 import os
 PLATFORM = '../../../AltspaceVR'
-TYPE='latency'
+TYPE='E2Elatency'
 DATE='0516'
 # FILE = 'U1_time/time_5.mp4'
 # ACTION = 'U1_time'
