@@ -2,8 +2,8 @@
 This repository contains scripts used in our IMC'22 paper "Are We Ready for Metaverse? A Measurement Study of Social Virtual Reality Platforms".
 
 ## Repo Structure
-Repo Root
 ```
+Repo Root
 +-- disruption.py          # Sec. 8: Network Disruptions
 +-- plot_paper.py          # Backbond of plotting results
 +-- ovr_plot.py            # Retrive data from OVR Metrics Tool and plot the results
@@ -29,6 +29,9 @@ Please cite our paper if you think the source codes are useful in your research 
     booktitle={Proceedings of ACM SIGCOMM Conference on Internet Measurement (IMC)}
 }
 ```
+You may also feel interested in our measurement study on Horizon Workrooms: https://ieeexplore.ieee.org/document/9757549
+and
+our vision paper about Metaverse from the network perspective: https://arxiv.org/pdf/2201.12894.pdf
 
 ## Contact
 Ruizhi Cheng by rcheng4@gmu.edu
