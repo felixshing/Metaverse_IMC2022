@@ -31,7 +31,7 @@ Please cite our paper if you think the source codes are useful in your research 
 ```
 You may also feel interested in our measurement study on Horizon Workrooms: https://ieeexplore.ieee.org/document/9757549
 and
-our vision paper about Metaverse from the network perspective: https://arxiv.org/pdf/2201.12894.pdf
+our vision paper about Metaverse from the network perspective: https://arxiv.org/pdf/2201.12894.pdf.
 
 ## Contact
 Ruizhi Cheng by rcheng4@gmu.edu
