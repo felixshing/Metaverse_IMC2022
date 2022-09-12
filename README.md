@@ -17,7 +17,7 @@ Repo Root
 ```
 
 ## Personal Homepage
-  * [Homepage](https://felixshing.github.io/)
+[Homepage](https://felixshing.github.io/)
 
 ## Notes
 Please cite our paper if you think the source codes are useful in your research project.
