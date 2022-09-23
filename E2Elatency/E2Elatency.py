@@ -22,12 +22,7 @@ def convert_s_to_ms(list):
     return res
 
 
-def get_avg(list):
-    list.remove(min(list))
-    list.remove(min(list))
-    list.remove(max(list))
-    list.remove(max(list))
-    return np.mean(list)
+
 
 
 ######################
@@ -68,36 +63,24 @@ U1_AP_ping = 6.863
 U1_AP_Quest2_offset_1 = -28.553640625
 U1_AP_Quest2_offset_2 = -29.574041015625
 
-##hubs 3U
-U1_AP_Quest2_offset = -74.342388671875
-##5U
-U1_AP_Quest2_offset = -44.922837890625
 
-#U1_AP_Quest2_offset = U1_AP_Quest2_offset_1 - U1_AP_ping / 2
-# U1_AP_Quest2_offset = np.mean([U1_AP_Quest2_offset_1,U1_AP_Quest2_offset_2]) - U1_AP_ping / 2
-# U1_AP_Quest2_offset = U1_AP_Quest2_offset_1*1000
+U1_AP_Quest2_offset = np.mean([U1_AP_Quest2_offset_1,U1_AP_Quest2_offset_2]) - U1_AP_ping / 2
 
 U1_start_time = U1_start_time + U1_AP_Quest2_offset
 
 U1_action_FPS = 70.62
 U1_action_time = []
 
-# U1_action_frame = [280,458]
-# U2_action_frame= [144,318]
-
 
 U1_action_timestamp=[3717,3897]
 U2_action_timestamp=[1753,2546]
 
-# U1_AP_timestamp_s = []
-# U2_AP_timestamp_s = []
 
 U1_action_segtime = 175000
 for i in range(len(U1_action_timestamp)):
     U1_action_time.append(U1_start_time + U1_action_segtime +
                           U1_action_timestamp[i])
 
-# U1_action_time_s = convert_ms_to_s(U1_action_time)
 
 
 U2_whole_FPS = 69.158
@@ -108,7 +91,6 @@ U2_unixtime_start_frame = 10
 U2_time_each_frame_ms = 1000 / U2_time_fps
 U2_time_seg = 10000
 U2_time_video_start_timestamp = 114.977
-# U2_start_time = U2_unixtime_start -U2_time_seg - (U2_unixtime_start_frame-1)*U2_time_each_frame_ms
 U2_start_time = U2_unixtime_start - U2_time_seg - U2_time_video_start_timestamp
 
 U2_AP_ping_1 = 8.449
@@ -119,19 +101,15 @@ U2_AP_ping = (U2_AP_ping_1 + U2_AP_ping_2) / 2
 
 U2_AP_Quest2_offset_1 = -67.24744921875
 U2_AP_Quest2_offset_2 = -62.88229296875
-# U2_AP_Quest2_offset = np.mean([U2_AP_Quest2_offset_1,U2_AP_Quest2_offset_2])- U2_AP_ping / 2
-# U2_AP_Quest2_offset = U2_AP_Quest2_offset_1*1000
-U2_AP_Quest2_offset = U2_AP_Quest2_offset_1 - U2_AP_ping / 2
+U2_AP_Quest2_offset = np.mean([U2_AP_Quest2_offset_1,U2_AP_Quest2_offset_2]) - U2_AP_ping / 2
 
 
 U2_start_time = U2_start_time + U2_AP_Quest2_offset
 
-#print(U2_start_time-U1_start_time)
-# exit(0)
+
 
 U2_action_FPS = 71.443
 U2_action_time = []
-# U2_action_frame= [144,318]
 U2_action_segtime = 175000
 for i in range(len(U2_action_timestamp)):
     U2_action_time.append(U2_start_time + U2_action_segtime +

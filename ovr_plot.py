@@ -11,10 +11,11 @@ import numpy as np
 import pandas as pd
 import os
 
-PLATFORM = '../../Worlds'
+PLATFORM = '../Worlds'
 TYPE='dis'
+# DATE='0323_dis/shooting_downlink_throughput_2'
 DATE='0406_dis/downlink_shooting_1'
-
+FILENAME = 'dis_process_0414_fps.csv'
 FILENAME = '20220406_155342_worlds_downlink_shooting_dis_process.csv'
 file = os.path.join(PLATFORM,TYPE,DATE,FILENAME)
 
@@ -121,9 +122,10 @@ avg_pred_ms=get_avg_pred_ms(file)
 time_stamp = get_time_stamp(file)
 cpu_utilization_percentage=get_cpu_utilization_percentage(file)
 gpu_utilization_percentage=get_gpu_utilization_percentage(file)
-
+print(cpu_utilization_percentage)
 
 frame = [[average_frame_rate,'Average'],[stale_frame_rate,'Stale'],[early_frame_rate,'Early']]
+frame = [[average_frame_rate,'Average'],[stale_frame_rate,'Stale']]
 resolution = [[eye_buffer_width,'Width'],[eye_buffer_height,'Height']]
 #print(resolution)
 twgt= [[time_wrap_gpu_time,'time_wrap_gpu_time']]
@@ -134,9 +136,69 @@ app_gpu_time=[[app_gpu_time,'app_gpu_time']]
 #print(tear)
 #print(resolution)
 utilization = [[cpu_utilization_percentage,'CPU'],[gpu_utilization_percentage,'GPU']]
-#plot_trace(frame,'Time (s)','frame')
+trace_and_label=utilization
+xlabel='Time (s)'
+# ylabel='Frame Rate'
+ylabel='Utilization (%)'
+x = np.arange(1, len(trace_and_label[0][0]) + 1, 1)
+fig, ax1 = plt.subplots()
+ax1.set_xlabel(xlabel, fontsize=90)
+ax1.set_ylabel(ylabel, fontsize=90)
+##linewidth = 8 or 15
+for i in range(len(trace_and_label)):
+    ax1.plot(x, trace_and_label[i][0],label=trace_and_label[i][1],linewidth = 8)
+
+ax1.spines['top'].set_visible(False)
+ax1.spines['right'].set_visible(False)
+### 120 or 80
+ax1.tick_params(axis='x', labelsize = 90)
+ax1.tick_params(axis='y', labelsize = 90)
+
+ax1.set_xticks([40,80, 120, 160,200, 240, 300])
+# ax1.set_yticks([0,10, 20, 30,40, 50, 60,72])
+# ax1.set_ylim(0, 80)
+ax1.set_xlim(0, 300)
+plt.subplots_adjust(bottom=0.14)
+
+# ax1.text(5, 40, '1.0', fontsize=90, color='red')
+# ax1.text(45, 40, '0.7', fontsize=90, color='red')
+# ax1.text(85, 40, '0.5', fontsize=90, color='red')
+# ax1.text(125, 40, '0.3', fontsize=90, color='red')
+# ax1.text(165, 40, '0.2', fontsize=90, color='red')
+# ax1.text(205, 40, '0.1', fontsize=90, color='red')
+# ax1.text(260, 40, 'N', fontsize=90, color='red')
+ax1.set_yticks([0,50,70,100])
+ax1.set_ylim([0,100])
+ax1.text(5, 20, '1.0', fontsize=90, color='red')
+ax1.text(45, 20, '0.7', fontsize=90, color='red')
+ax1.text(85, 20, '0.5', fontsize=90, color='red')
+ax1.text(125, 20, '0.3', fontsize=90, color='red')
+ax1.text(165, 20, '0.2', fontsize=90, color='red')
+ax1.text(205, 20, '0.1', fontsize=90, color='red')
+ax1.text(260, 20, 'N', fontsize=90, color='red')
+ax1.set_ylim([0, 110])
+plt.subplots_adjust(bottom=0.14)
+
+
+
+plt.grid()
+
+
+
+
+
+# altspace VR
+#plt.legend(fontsize=60, loc='upper center', bbox_to_anchor=(0.23, 1.15))
+plt.legend(fontsize=90, loc='upper center', bbox_to_anchor=(0.5, 1.2),ncol=2,columnspacing=0.4)
+#plt.legend(fontsize=95, loc='upper center', bbox_to_anchor=(0.5, 1.2), ncol=2)
+#plt.legend(fontsize=100, loc='best')
+plt.show()
+
+
+
+# plot_trace(frame,'Time (s)','frame')
 #plot_trace(resolution,'Time (s)','Resolution')
 #print(height)
 #plot_trace(height,'timestamp','value')
-plot_trace(utilization,'Time (s)', 'Utilization (%)' )
+#plot_trace(utilization,'Time (s)', 'Utilization (%)' )
 #plot_trace(utilization,'Time (s)','value')
