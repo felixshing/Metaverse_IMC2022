@@ -1,5 +1,6 @@
 # ACM IMC '22: Are We Ready for Metaverse? A Measurement Study of Social Virtual Reality Platforms
-This repository contains scripts used in our IMC'22 paper "Are We Ready for Metaverse? A Measurement Study of Social Virtual Reality Platforms".
+This repository contains scripts used in our ACM IMC'22 paper "Are We Ready for Metaverse? A Measurement Study of Social Virtual Reality Platforms".
+https://dl.acm.org/doi/abs/10.1145/3517745.3561417
 
 ## Repo Structure
 ```
